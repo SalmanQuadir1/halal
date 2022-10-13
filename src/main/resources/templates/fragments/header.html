@@ -1,0 +1,66 @@
+	<div th:fragment="myheader">
+	<!-- header -->
+	<div class="top-header-area bg-dark" id="sticker">
+		<div class="container header">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+				
+						<div class="site-logo">
+							<a th:href="@{/dashboard/home}">
+								<img th:src="@{/images/iccv_logo-removebg-preview.png}" alt="">
+							</a>
+						</div>
+						
+						<nav class="main-menu ">
+							<ul>
+								<li class="current-list-item"><a th:href="@{/dashboard/home}">HOME</a>
+									<ul class="sub-menu">
+										<li><a th:href="@{/dashboard/home}">Static Home</a></li>
+<!-- 										<li><a th:href="@{/dashboard/index}">Slider Home</a></li>
+ -->									</ul>
+								</li>
+								
+<!-- 								<li><a th:href="@{/dashboard/about}">ABOUT US</a></li>
+ -->								<li><a href="#">ABOUT US</a></li>
+								
+								<li><a href="#">GET CERTIFIED</a>
+									<ul class="sub-menu">
+										<li><a href="#">About</a></li>
+										<li><a href="#">Cart</a></li>
+										<li><a href="#">Check Out</a></li>
+										<li><a href="#">Contact</a></li>
+										<li><a href="#">News</a></li>
+										<li><a href="#">Shop</a></li>
+									</ul>
+								</li>
+								<li><a href="#">BUSINESS</a>
+									<ul class="sub-menu">
+										<li><a href="#">Business Details</a></li>
+										
+									</ul>
+								</li>
+								<li><a href="#">USER</a>
+									<ul class="sub-menu">
+										<li><a th:href="@{/user/adduser}">Add User</a></li>
+										<li><a th:href="@{/user/viewuser}">View User </a></li>
+									</ul>
+								</li>
+								<li><a href="#">CONTACT</a></li>
+								 <li>
+									<div class="header-icons">
+										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+									</div>
+								</li> 
+							</ul>
+						</nav>
+						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+						<div class="mobile-menu"></div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- end header -->

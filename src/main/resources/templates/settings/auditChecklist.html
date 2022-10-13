@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ICCV</title>
+   <link rel="stylesheet" th:href="@{/css/form.css}">
+   <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/all.min.css}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" th:href="@{/css/all.min.css}">
+	<!-- bootstrap -->
+	<link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
+	<!-- owl carousel -->
+	<link rel="stylesheet" th:href="@{/css/owl.carousel.css}">
+	<!-- magnific popup -->
+	<link rel="stylesheet" th:href="@{/css/magnific-popup.css}">
+	<!-- animate css -->
+	<link rel="stylesheet" th:href="@{/css/animate.css}">
+	<!-- mean menu css -->
+	<link rel="stylesheet" th:href="@{/css/meanmenu.min.css}">
+	<!-- main style -->
+	<link rel="stylesheet" th:href="@{/css/main.css}">
+	<!-- responsive -->
+	<link rel="stylesheet" th:href="@{/css/responsive.css}">
+   
+    
+    
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+#regForm {
+  background-color: #ffffff;
+  /* margin: 100px auto; */
+  font-family: Raleway;
+  padding: 40px;
+  /* width: 70%;
+  min-width: 300px; */
+}
+
+h1 {
+  text-align: center;  
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #04AA6D;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
+.tbl, th,td{
+      border: 2px solid black !important;
+     }
+     .t2 td{
+      border:none !important;
+     }
+      .pt{
+     padding-top:100px;
+     }
+      @media screen and (min-device-width:100px) and (max-device-width: 600px) { 
+      .headerImage{
+      display:none;
+      }
+      .pad{
+      width:100%;
+      }
+      .sigPad{
+      width:100% !important;
+      }
+      
+     }
+</style>
+</head>
+<body>
+<div th:insert="fragments/header :: myheader"></div>
+    <div class="container pt">
+    <form class="bg-light  " id="regForm" th:action="@{/dashboard/home}">
+    
+      <div class="tab" >
+        <div class="row">
+            <div class="col-md-2">
+                <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="img" width="150" height="150">
+                
+            </div>
+            <div class="col-md-8">
+            <h4 class="text-center"><b> ISLAMIC CO-ORDINATING COUNCIL
+                OF VICTORIA (ICCV) PTY. LTD.</b></h4>
+                <h6 class="text-center"> 12 Howes Street, Airport West VIC 3042 (PO Box 775 Tullamarine VIC 3043)<br>
+                    Phone : + 61 3 9380 5467 Fax : +61 3 9380 6143<br>
+                    Web page : www.iccv.com.au Email : office@iccv.com.au <br>
+                <b>ABN : 30 542 393 936</b>   </h6>
+                <h3 class="text-center"><b> AUDIT CHECKLIST</b></h3>
+            </div>
+            <div class="col-md-2">
+                <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="img" width="150" height="150">
+            </div>
+            <br>
+            <div class="col-md-12">
+                                    <hr style="height:2px;border-width:0;color:black;background-color:black">
+                                  </div>
+            <div class="form-group col-md-12">
+                <label for="inputAddress2"> <b>Company Name:</b></label><br>
+                <!-- <input type="text" class="form-control" id="inputAddress2" placeholder=""> -->
+                <select class="form-control" aria-label="Default select example">
+					  <option selected>Company Name</option>
+					  <option value="1">ASTE</option>
+					  <option value="2">ABC</option>
+					  <option value="3">XYZ</option>
+					</select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPassword4"><b>Address: </b></label>
+              <input type="text" class="form-control" id="inputPassword4" placeholder="">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPassword4"><b>Contact: </b></label>
+              <input type="text" class="form-control" id="inputPassword4" placeholder="">
+            </div>
+                <div class=" col-md-12 table table-responsive">
+                    
+                              <table class="table t2" style="border:none !important;">
+                              <thead>
+                              
+                              </thead>
+                           <tbody>
+                            <tr>
+                            <td colspan="4">
+                            Is there any major changes within your organization since the last ICCV audit?<br><br>
+                           
+                              <div class="form-group col-md-12">
+			                    <label for="inputAddress"> <b>	Please State  </b></label>
+			                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+			                  </div>
+					          
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                             <!-- <td colspan="8">
+                              <div class="form-group col-md-12">
+                    <label for="inputAddress"> <b>	Please State  </b></label>
+                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+                  </div>
+					            </td> -->
+                             </tr>
+                             <tr>
+                            <td colspan="4">
+                          1.&nbsp; Does the establishment hold an Approved Halal Program?
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                          2.&nbsp; Does the company have a current Annual Halal Certificate? Obtain a copy
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                          3.&nbsp; Does the company have a current Certificate of Registration from either Federal or State Authorities? Obtain a copy
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                          4.&nbsp; Does the establishment Approved Halal Program meet the requirement / standards of relevant overseas authorities (JAKIM, MUI, MUIS etc)?<br><br>
+                           Is there any outstanding documentation from Stage 1?<br><br>
+                           <div class="form-group col-md-12">
+			                    <label for="inputAddress"> <b>	If so, what are they: </b></label>
+			                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+			                  </div>
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                           5.&nbsp;  Was the full product list obtained? <br>
+                            Is there any Non-Halal or Halal Suitable but not certified products produced onsite? <br><br>
+                            <div class="form-group col-md-12">
+			                    <label for="inputAddress"> <b>	If so,how many: </b></label>
+			                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+			                  </div> 
+			                  <b>Inspect processing lines and areas during site audit* </b>
+                           
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                           6.&nbsp;If there is Non-Halal or Halal Suitable but not certified products being produced, is there adequate segregation and
+                            separation of the final products? Do you have records?<b>Obtain a copy*</b> <br><br>
+                            <div class="form-group col-md-12">
+			                    <label for="inputAddress"> <b>	Note segregation procedure: </b></label>
+			                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+			                  </div> 
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                           7. &nbsp;How often is your Halal Certificates of raw materials reviewed for compliance? Do you contrast them against the
+                            export markets such JAKIM, MUI or any other market which you may intend to export to?<br><br>
+                             <div class="form-group col-md-12">
+			                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+			                    <label for="inputAddress"> <b>	Basis </b></label>
+			                  </div> 
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                           8.&nbsp;Does your facility undertake any extraction processes? <br><br>
+                           <div class="form-group col-md-12">
+			                    <label for="inputAddress"> <b>	If so, obtain a process flowchart. </b></label>
+			                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+			                  </div>
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                           9.&nbsp;Is there any chemicals on site which may impact Halal Integrity or Food Safety?<br><br>
+                                <div class="form-group col-md-12">
+			                    <label for="inputAddress"> <b>If so, who is responsible to overlook the chemical usage within the site?	 </b></label>
+			                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+			                  </div>
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                             10.&nbsp;Does the company have a halal inspector to monitor the halal process?
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                            </tbody>
+                       </table>
+             </div>
+             
+            </div>
+            </div>
+            
+            
+            
+            
+            
+            <div class="tab" >
+        <div class="row">
+            <div class="col-md-2">
+                <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="img" width="150" height="150">
+                
+            </div>
+            <div class="col-md-8">
+            <h4 class="text-center"><b> ISLAMIC CO-ORDINATING COUNCIL
+                OF VICTORIA (ICCV) PTY. LTD.</b></h4>
+                <h6 class="text-center"> 12 Howes Street, Airport West VIC 3042 (PO Box 775 Tullamarine VIC 3043)<br>
+                    Phone : + 61 3 9380 5467 Fax : +61 3 9380 6143<br>
+                    Web page : www.iccv.com.au Email : office@iccv.com.au <br>
+                <b>ABN : 30 542 393 936</b>   </h6>
+                <h3 class="text-center"><b> AUDIT CHECKLIST</b></h3>
+            </div>
+            <div class="col-md-2">
+                <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="img" width="150" height="150">
+            </div>
+            <br>
+            <div class="col-md-12">
+                                    <hr style="height:2px;border-width:0;color:black;background-color:black">
+                                  </div>
+                <div class=" col-md-12 table table-responsive">
+                              <table class="table t2" style="border:none !important;">
+                              <thead>
+                              
+                              </thead>
+                           <tbody>
+                           
+                           
+                             <tr>
+                            <td colspan="4">
+                           11.&nbsp;Do the final products contain any ingredients of animal origin?
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                           12.&nbsp;Are any of the products made from a media containing animal ingredients or derivatives? 
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                           13.&nbsp;Are the ingredients of animal origin products (Media incl.) derived from Halal slaughtered
+                            animals? If yes,<b> Obtain certificate*</b>
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                           14.&nbsp;Are emulsifiers used in production?
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                           15.&nbsp;Are emulsifiers from an animal origin? 
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                           16.&nbsp;Do the animal origin emulsifiers come from halal slaughtered animals?
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                              <tr>
+                            <td colspan="4">
+                           17.&nbsp;Are processing aid used in products? What processing aids are utilized?<br>
+                           <div class="form-group col-md-12">
+			                    <label for="inputAddress"> <b>	If so,<b>obtain process flowchart</b> </b></label>
+			                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+			                  </div>
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                              <tr>
+                            <td colspan="4">
+                           18.&nbsp;Are the suppliers of the company Halal accredited? <br><br>
+                           Have you communicated to them that you are a Halal Certified facility?
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                              <tr>
+                            <td colspan="4">
+                           19.&nbsp;Are the suppliers’ records updated?
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                              <tr>
+                            <td colspan="4">
+                           20.&nbsp;Do the products contain any alcohol? What are the names of these products?<br><br>
+                            <div class="form-group col-md-12">
+			                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+			                  </div>
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                            </tbody>
+                       </table>
+                      
+              
+                       
+                  </div>
+            
+            </div>
+            </div>
+            
+            <div class="tab" >
+        <div class="row">
+            <div class="col-md-2">
+                <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="img" width="150" height="150">
+                
+            </div>
+            <div class="col-md-8">
+            <h4 class="text-center"><b> ISLAMIC CO-ORDINATING COUNCIL
+                OF VICTORIA (ICCV) PTY. LTD.</b></h4>
+                <h6 class="text-center"> 12 Howes Street, Airport West VIC 3042 (PO Box 775 Tullamarine VIC 3043)<br>
+                    Phone : + 61 3 9380 5467 Fax : +61 3 9380 6143<br>
+                    Web page : www.iccv.com.au Email : office@iccv.com.au <br>
+                <b>ABN : 30 542 393 936</b>   </h6>
+                <h3 class="text-center"><b> AUDIT CHECKLIST</b></h3>
+            </div>
+            <div class="col-md-2">
+                <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="img" width="150" height="150">
+            </div>
+            <br>
+            <div class="col-md-12">
+                                    <hr style="height:2px;border-width:0;color:black;background-color:black">
+                                  </div>
+                <div class=" col-md-12 table table-responsive">
+                              <table class="table t2" style="border:none !important;">
+                              <thead>
+                              
+                              </thead>
+                           <tbody>
+                           
+                           
+                             <tr>
+                            <td colspan="1">
+                           21.&nbsp;If Yes</td>
+                                <td style="width:2px;"><input type="checkbox" name=""></td>
+                                <td> What type of alcohol is used and where they are kept?</td>
+                            </tr>
+                             <tr>
+                              <td colspan="2">Consumable Alcohol / Alcoholic Beverage </td>
+                              <td colspan="2" style="width:10px;"><input type="checkbox" name=""></td>
+                             </tr> 
+                             <tr>
+                              <td colspan="2">Ethanol (Industrial) </td>
+                              <td colspan="2" style="width:10px;"><input type="checkbox" name=""></td>
+                             </tr> 
+                             <tr>
+                             <td colspan="4">
+                             Where is the alcohol stored, is there adequate segregation? 
+                             <div class="form-group col-md-12">
+			                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+			                  </div>
+			                  </td>
+			                  </tr>
+                             <tr>
+                            <td colspan="4">
+                           22.&nbsp;What is the percentage of ethanol in?<br>
+							 &nbsp;&nbsp;    Production %<br>
+							 &nbsp;&nbsp;     Consumable product %
+                            </td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                           23.&nbsp;Is gelatin used in production or cleaning?
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                           24.&nbsp;What sort of gelatin is used? </td>
+                            </tr>
+                            <tr>
+                              <td colspan="1">Cattle </td>
+                              <td colspan="1" style="width:10px;"><input type="checkbox" name=""></td>
+                             </tr> 
+                             <tr>
+                              <td colspan="1">Chicken </td>
+                              <td colspan="1" style="width:10px;"><input type="checkbox" name=""></td>
+                             </tr>
+                             <tr>
+                              <td colspan="1">Fish </td>
+                              <td colspan="1" style="width:10px;"><input type="checkbox" name=""></td>
+                             </tr>
+                             <tr>
+                              <td colspan="1">Seaweed </td>
+                              <td colspan="1" style="width:10px;"><input type="checkbox" name=""></td>
+                             </tr>
+                             <tr>
+                            <td colspan="4">
+                           25.&nbsp;Is gelatin derived from halal sources?<b> Obtain Halal Certificate </b>
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                           26.&nbsp;Does the company use, manufacture, store and transport any pork or pork by products? 
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                              <tr>
+                            <td colspan="4">
+                           27.&nbsp;Does the company have a process flowchart?
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                              <tr>
+                            <td colspan="4">
+                           28.&nbsp;What sort of manufacturing process is used?  </td>
+                            </tr>
+                            <tr>
+                              <td colspan="1">Chemical Synthesis   </td>
+                              <td colspan="1" style="width:10px;"><input type="checkbox" name=""></td>
+                             </tr> 
+                             <tr>
+                              <td colspan="1">Physical Process </td>
+                              <td colspan="1" style="width:10px;"><input type="checkbox" name=""></td>
+                             </tr>
+                             <tr>
+                              <td colspan="1">Enzymatic Process </td>
+                              <td colspan="1" style="width:10px;"><input type="checkbox" name=""></td>
+                             </tr>
+                             <tr>
+                              <td colspan="1">Microbial Process </td>
+                              <td colspan="1" style="width:10px;"><input type="checkbox" name=""></td>
+                             </tr>
+                              <tr>
+                            <td colspan="4">
+                           29.&nbsp;Does the company have a cleaning flowchart/Procedure?
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                              <tr>
+                            <td colspan="4">
+                           30.&nbsp;Does the company have purchasing records?
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                            </tbody>
+                       </table>
+                      
+              
+                       
+                  </div>
+            
+            </div>
+            </div>
+            
+                   <div class="tab" >
+        <div class="row">
+            <div class="col-md-2">
+                <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="img" width="150" height="150">
+                
+            </div>
+            <div class="col-md-8">
+            <h4 class="text-center"><b> ISLAMIC CO-ORDINATING COUNCIL
+                OF VICTORIA (ICCV) PTY. LTD.</b></h4>
+                <h6 class="text-center"> 12 Howes Street, Airport West VIC 3042 (PO Box 775 Tullamarine VIC 3043)<br>
+                    Phone : + 61 3 9380 5467 Fax : +61 3 9380 6143<br>
+                    Web page : www.iccv.com.au Email : office@iccv.com.au <br>
+                <b>ABN : 30 542 393 936</b>   </h6>
+                <h3 class="text-center"><b> AUDIT CHECKLIST</b></h3>
+            </div>
+            <div class="col-md-2">
+                <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="img" width="150" height="150">
+            </div>
+            <br>
+            <div class="col-md-12">
+                                    <hr style="height:2px;border-width:0;color:black;background-color:black">
+                                  </div>
+                <div class=" col-md-12 table table-responsive">
+                              <table class="table t2" style="border:none !important;">
+                              <thead>
+                              
+                              </thead>
+                           <tbody>
+                           
+                           
+                             <tr>
+                            <td colspan="4">
+                           31.&nbsp;Does the company have a food safety (HACCP) program? <br>
+                           <div class="form-group col-md-12">
+			                    <label for="inputAddress">   What quality accreditations does your facility hold?</label>
+			                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+			                  </div>
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                           32.&nbsp;Does the company have a recall system for non-halal compliance products? 
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                           33.&nbsp;Does the company have a traceability system in place for halal products? 
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                           34.&nbsp;Does the company have halal training records (Halal Awareness) GMP or Induction?
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                           35.&nbsp;Are the equipment used for manufacturing of Halal products also used for the manufacturing of 
+                           products containing ingredients of animal origin? 
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                            
+                              <tr>
+                            <td colspan="4">
+                           36.&nbsp;What brand name(s) do you use for your products? Do you have any brand names which may be 
+                           non-halal or may be misleading in regard to Halal?<br>
+                           <div class="form-group col-md-12">
+			                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+			                  </div>
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                              <tr>
+                            <td colspan="4">
+                           37.&nbsp;What is the transportation procedure for Halal products?  How they (Halal products) are separated and segregated 
+                           from non-Halal products during the transportation?<br>
+                           <div class="form-group col-md-12">
+			                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+			                  </div>
+                            </td>
+                               
+                            </tr>
+                              <tr>
+                            <td colspan="4">
+                           38.&nbsp;Do you accompany Health Certificate (EX 188) with ICCV Shipment certificate? 
+                            </td>
+                                <td style="width:10px;"><input type="checkbox" name=""></td>
+                                <td style="width:10px;">No</td>
+                                <td style="width:10px;" ><input type="checkbox" name=""></td>
+                                <td style="width:10px;">Yes</td>
+                            </tr>
+                             <tr>
+                            <td colspan="4">
+                          <b>What are your export destinations?</b>
+                          </td>
+                            </tr>
+                            <tr>
+                              <td colspan="1">Indonesia </td>
+                              <td colspan="1" style="width:10px;"><input type="checkbox" name=""></td>
+                             </tr> 
+                             <tr>
+                              <td colspan="1">Malaysia   </td>
+                              <td colspan="1" style="width:10px;"><input type="checkbox" name=""></td>
+                             </tr>
+                             <tr>
+                              <td colspan="1">Kingdom of Saudi Arabia </td>
+                              <td colspan="1" style="width:10px;"><input type="checkbox" name=""></td>
+                             </tr>
+                             <tr>
+                              <td colspan="1">Gulf Countries   </td>
+                              <td colspan="1" style="width:10px;"><input type="checkbox" name=""></td>
+                             </tr>
+                            <tr>
+                              <td colspan="1">Egypt   </td>
+                              <td colspan="1" style="width:10px;"><input type="checkbox" name=""></td>
+                             </tr>
+                             <tr>
+                             <td>
+                             Others (Please Specify)
+                               <div class="form-group col-md-12">
+                              
+			                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+			                  </div>
+			                  </td>
+                             </tr>
+                             <tr>
+                             <td>
+                             <div class="form-group col-md-12">
+			                    <label for="inputAddress"> <b>Audit Comments </b></label>
+			                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+			                  </div>
+			                  </td>
+			                   </tr>
+                            </tbody>
+                       </table>
+                      
+              
+                       
+                  </div>
+                  
+                  
+            
+            </div>
+            </div>
+                    
+                   <div class="tab" >
+        <div class="row">
+            <div class="col-md-2">
+                <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="img" width="150" height="150">
+                
+            </div>
+            <div class="col-md-8">
+            <h4 class="text-center"><b> ISLAMIC CO-ORDINATING COUNCIL
+                OF VICTORIA (ICCV) PTY. LTD.</b></h4>
+                <h6 class="text-center"> 12 Howes Street, Airport West VIC 3042 (PO Box 775 Tullamarine VIC 3043)<br>
+                    Phone : + 61 3 9380 5467 Fax : +61 3 9380 6143<br>
+                    Web page : www.iccv.com.au Email : office@iccv.com.au <br>
+                <b>ABN : 30 542 393 936</b>   </h6>
+                <h3 class="text-center"><b> AUDIT CHECKLIST</b></h3>
+            </div>
+            <div class="col-md-2">
+                <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="img" width="150" height="150">
+            </div>
+            <br>
+            <div class="col-md-12">
+                                    <hr style="height:2px;border-width:0;color:black;background-color:black">
+                                  </div>
+            
+            <div class="col-md-12 mt-4">
+                  <h4>ICCV Audit Team</h4>
+                  </div>
+                  
+                                         <div class="form-group col-md-3 text-center mt-3">
+                                              <label for="inputAddress2"> <b>Lead Auditor</b></label>
+                                          
+                                          </div>
+                                           <div class="form-group col-md-9  mt-3">
+                                              <label for="inputAddress2"> <b> Full Name:</b></label>
+                                           <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                                          </div>
+             
+                                    <div class="col-md-3 mt-3"></div>
+                                            <div class="form-group col-md-6 mt-3 text-center">
+                                              <label for="inputAddress2"> <b>Signature</b></label>
+                                           <div class="sigPad" id="linear" style="width:404px;">
+                                                    <div class="sig sigWrapper" style="height:auto;">
+                                                        <div class="typed"></div>
+                                                        <canvas class="pad" width="400" height="200" id="c"></canvas>
+                                                        <input type="hidden" name="output" class="output">
+                                                        <form:hidden path="signature" id="sig_image" />
+                                                        
+                                                    </div>
+                                                    <ul class="sigNav">
+                                                        <li class="clearButton"><button type="button" id="clearSignature" class="btn btn-sm btn-light">Clear</button></li>
+                                                    </ul>
+                                                </div>  
+                                          </div>
+                                          <div class="form-group col-md-3 text-center mt-3">
+                                              <label for="inputAddress2"> <b> Date</b></label>
+                                           <input type="Date" class="form-control" id="inputAddress2" placeholder="">
+                                          </div>
+            
+            
+            
+                                           <div class="form-group col-md-3 text-center mt-3">
+                                              <label for="inputAddress2"> <b> Technical Auditor</b></label>
+                                          
+                                          </div>
+                                           <div class="form-group col-md-9  mt-3">
+                                              <label for="inputAddress2"> <b> Full Name:</b></label>
+                                           <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                                          </div>
+                                          
+                                           <div class="col-md-3 mt-3"></div>
+                   <div class="form-group col-md-6 mt-3 text-center">
+                                              <label for="inputAddress2"> <b>Signature</b></label>
+                                           <div class="sigPad" id="linear" style="width:404px;">
+                                                    <div class="sig sigWrapper" style="height:auto;">
+                                                        <div class="typed"></div>
+                                                        <canvas class="pad" width="400" height="200" id="c"></canvas>
+                                                        <input type="hidden" name="output" class="output">
+                                                        <form:hidden path="signature" id="sig_image" />
+                                                        
+                                                    </div>
+                                                    <ul class="sigNav">
+                                                        <li class="clearButton"><button type="button" id="clearSignature" class="btn btn-sm btn-light">Clear</button></li>
+                                                    </ul>
+                                                </div>  
+                                          </div>
+                                          
+                                          <div class="form-group col-md-3 text-center mt-3">
+                                              <label for="inputAddress2"> <b> Date</b></label>
+                                           <input type="Date" class="form-control" id="inputAddress2" placeholder="">
+                                          </div>
+                                          
+                                          <div class="form-group col-md-3 text-center mt-3">
+                                              <label for="inputAddress2"> <b> Sharia Auditor</b></label>
+                                          
+                                          </div>
+                                           <div class="form-group col-md-9  mt-3">
+                                              <label for="inputAddress2"> <b> Full Name:</b></label>
+                                           <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                                          </div>
+            
+                                                               <div class="col-md-3 mt-3"></div>
+                   <div class="form-group col-md-6 mt-3 text-center">
+                                              <label for="inputAddress2"> <b>Signature</b></label>
+                                           <div class="sigPad" id="linear" style="width:404px;">
+                                                    <div class="sig sigWrapper" style="height:auto;">
+                                                        <div class="typed"></div>
+                                                        <canvas class="pad" width="400" height="200" id="c"></canvas>
+                                                        <input type="hidden" name="output" class="output">
+                                                        <form:hidden path="signature" id="sig_image" />
+                                                        
+                                                    </div>
+                                                    <ul class="sigNav">
+                                                        <li class="clearButton"><button type="button" id="clearSignature" class="btn btn-sm btn-light">Clear</button></li>
+                                                    </ul>
+                                                </div>  
+                                          </div>
+                                          
+                                          <div class="form-group col-md-3 text-center mt-3">
+                                              <label for="inputAddress2"> <b> Date</b></label>
+                                           <input type="Date" class="form-control" id="inputAddress2" placeholder="">
+                                          </div>
+                                          
+                                          <div class="col-md-12">
+                                          <h4>Company Representative:</h4>
+                                          </div>
+                                          
+                                          <div class="form-group col-md-6  mt-3">
+                                              <label for="inputAddress2"> <b> Full Name:</b></label>
+                                           <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                                          </div>
+                                          
+                                          <div class="form-group col-md-6  mt-3">
+                                              <label for="inputAddress2"> <b>Position</b></label>
+                                           <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                                          </div>
+                                            <div class="form-group col-md-6 mt-3 text-center">
+                                              <label for="inputAddress2"> <b>Signature</b></label>
+                                           <div class="sigPad" id="linear" style="width:404px;">
+                                                    <div class="sig sigWrapper" style="height:auto;">
+                                                        <div class="typed"></div>
+                                                        <canvas class="pad" width="400" height="200" id="c"></canvas>
+                                                        <input type="hidden" name="output" class="output">
+                                                        <form:hidden path="signature" id="sig_image" />
+                                                        
+                                                    </div>
+                                                    <ul class="sigNav">
+                                                        <li class="clearButton"><button type="button" id="clearSignature" class="btn btn-sm btn-light">Clear</button></li>
+                                                    </ul>
+                                                </div>  
+                                          </div>
+                                          
+                                          <div class="form-group col-md-3 text-center mt-3">
+                                              <label for="inputAddress2"> <b> Date</b></label>
+                                           <input type="Date" class="form-control" id="inputAddress2" placeholder="">
+                                          </div>             
+                                          
+            
+            </div>
+            </div>
+            
+             <div class="tab">
+                        <div class="row">
+                            <div class="col-md-2">
+                <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="img" width="150" height="150">
+                
+            </div>
+            <div class="col-md-8">
+            <h4 class="text-center"><b> ISLAMIC CO-ORDINATING COUNCIL
+                OF VICTORIA (ICCV) PTY. LTD.</b></h4>
+                <h6 class="text-center"> 12 Howes Street, Airport West VIC 3042 (PO Box 775 Tullamarine VIC 3043)<br>
+                    Phone : + 61 3 9380 5467 Fax : +61 3 9380 6143<br>
+                    Web page : www.iccv.com.au Email : office@iccv.com.au <br>
+                <b>ABN : 30 542 393 936</b>   </h6>
+                <h3 class="text-center"><b> AUDIT CHECKLIST</b></h3>
+            </div>
+            <div class="col-md-2">
+                <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="img" width="150" height="150">
+            </div>
+            <br>
+                            
+                                  <div class="col-md-12">
+                                    <hr style="height:2px;border-width:0;color:black;background-color:black">
+                                    <h3 class="text-center">Details of Non-Conformances Raised
+                                        </h3>
+                                  </div>
+
+                                 
+
+                                <div class=" col-md-12 table table-responsive">
+                                    
+                                    <table class="table table-bordered  tbl mt-4">
+                                      <thead>
+                                          <tr>
+                                            <th colspan="4" class="text-center"><b> For Completion by ICCV</b>  </th>
+                                            <th colspan="5" class="text-center"><b>For Completion by Client Representative</b> </th>
+                                            
+                                          </tr>
+                                        </thead>
+                                        <tbody id="tbody1">
+                                        <tr>
+                                            <td><b>NC NO</b></td>
+                                            <td> Description of Non-conformances</td>
+                                            <td> Scheme / Standard Ref</td>
+                                            <td> Major/ Minor</td>
+                                            <td> Root Cause of Non-Conformance </td>
+                                            <td> Actions to Correct Non-Conformance</td>
+                                            <td> Implementation Date</td>
+                                            <td> Evidence to be Provided</td>
+                                             <td>Action</td>
+                                          </tr>
+                                          <tr>
+                                            <td><input type="text"/></td>
+                                            <td> <input type="text"/></td>
+                                            <td> <input type="text"/></td>
+                                            <td> <input type="text"/></td>
+                                            <td> <input type="text"/> </td>
+                                            <td> <input type="text"/></td>
+                                            <td> <input type="text"/></td>
+                                            <td> <input type="text"/></td>
+                                            <td> </td>
+                                          </tr>
+                                          
+                                        </tbody>
+                                      </table>
+                                      <button class="btn btn-md btn-primary" id="addBtn1" type="button"> Add new Row
+                                 </button>
+                                   </div>
+
+                            </div>
+                            </div>
+
+        
+             
+            
+             <!-- <div class="tab">Login Info:
+          <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
+          <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+        </div>  -->
+             <div style="overflow:auto;">
+          <div style="float:right;">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+          </div>
+        </div>
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;margin-top:40px;">
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+           <span class="step"></span>
+           <span class="step"></span>
+        </div>
+            </form>
+            </div>
+            <div th:insert="fragments/footer :: myfooter"></div>
+            <script th:src="@{/js/jquery-1.11.3.min.js}"></script>
+	<!-- bootstrap -->
+	<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+	<!-- count down -->
+	<script th:src="@{/js/jquery.countdown.js}"></script>
+	<!-- isotope -->
+	<script th:src="@{/js/jquery.isotope-3.0.6.min.js}"></script>
+	<!-- waypoints -->
+	<script th:src="@{/js/waypoints.js}"></script>
+	<!-- owl carousel -->
+	<script th:src="@{/js/owl.carousel.min.js}"></script>
+	<!-- magnific popup -->
+	<script th:src="@{/js/jquery.magnific-popup.min.js}"></script>
+	<!-- mean menu -->
+	<script th:src="@{/js/jquery.meanmenu.min.js}"></script>
+	<!-- sticker js -->
+	<script th:src="@{/js/sticker.js}"></script>
+	<!-- main js -->
+	<script th:src="@{/js/main.js}"></script>
+    	<script th:src="@{/js/signaturepad.js}"></script>
+         <script>
+      var currentTab = 0; // Current tab is set to be the first tab (0)
+      showTab(currentTab); // Display the current tab
+      
+      function showTab(n) {
+        // This function will display the specified tab of the form...
+        var x = document.getElementsByClassName("tab");
+        x[n].style.display = "block";
+        //... and fix the Previous/Next buttons:
+        if (n == 0) {
+          document.getElementById("prevBtn").style.display = "none";
+        } else {
+          document.getElementById("prevBtn").style.display = "inline";
+        }
+        if (n == (x.length - 1)) {
+          document.getElementById("nextBtn").innerHTML = "Submit";
+        } else {
+          document.getElementById("nextBtn").innerHTML = "Next";
+        }
+        //... and run a function that will display the correct step indicator:
+        fixStepIndicator(n)
+      }
+      
+      function nextPrev(n) {
+        // This function will figure out which tab to display
+        var x = document.getElementsByClassName("tab");
+        // Exit the function if any field in the current tab is invalid:
+        if (n == 1 && !validateForm()) return false;
+        // Hide the current tab:
+        x[currentTab].style.display = "none";
+        // Increase or decrease the current tab by 1:
+        currentTab = currentTab + n;
+        // if you have reached the end of the form...
+        if (currentTab >= x.length) {
+          // ... the form gets submitted:
+          document.getElementById("regForm").submit();
+          return false;
+        }
+        // Otherwise, display the correct tab:
+        showTab(currentTab);
+      }
+      
+      function validateForm() {
+        // This function deals with validation of the form fields
+        var x, y, i, valid = true;
+       
+        // If the valid status is true, mark the step as finished and valid:
+        if (valid) {
+          document.getElementsByClassName("step")[currentTab].className += " finish";
+        }
+        return valid; // return the valid status
+      }
+      
+      function fixStepIndicator(n) {
+        // This function removes the "active" class of all steps...
+        var i, x = document.getElementsByClassName("step");
+        for (i = 0; i < x.length; i++) {
+          x[i].className = x[i].className.replace(" active", "");
+        }
+        //... and adds the "active" class on the current step:
+        x[n].className += " active";
+      }
+      </script>
+      <script>
+      $(document).ready(function () {
+      $('.sigPad').signaturePad({
+          defaultAction :'drawIt',            
+          penColour :'#145394',
+          lineWidth : 0,
+          drawOnly: true,
+          validateFields: true    
+        });    
+        
+        $('.sigPad').click(function(e){
+              e.preventDefault();
+              var instance = $('.sigPad').signaturePad();
+              var sig = instance.getSignatureImage();
+                $("#sig_image").val(sig); 
+                //console.log(sig);
+        });
+        
+        $("#clearSignature").click(function() {
+          console.log("Cleared");
+          $("#sig_image").val('');
+        });
+        });
+      //-------signature pad javascript ends here-----//
+      </script>
+      <script>
+      $(document).ready(function () {
+      var rowIdx = 0;
+
+  	  // jQuery button click event to add a row
+  	  $('#addBtn1').on('click', function () {
+
+  	    // Adding a row inside the tbody.
+  	    $('#tbody1').append(`<tr id="R${++rowIdx}">
+  	         <td class="row-index text-center">
+  	       
+  	        <input type="text"/>
+  	         </td>
+  	          <td class="text-center"><input type="text"/>
+  	            
+  	            </td>
+  	              <td class="text-center"><input type="text"/>
+  	            
+  	            </td>
+  	              <td class="text-center"><input type="text"/>
+  	            
+  	            </td>
+  	           
+  	              <td class="text-center"><input type="text"/>
+  	            
+  	            </td>
+  	            
+  	              <td class="text-center"><input type="text"/>
+  	            
+  	            </td>
+  	           
+  	              <td class="text-center"><input type="text"/>
+  	            
+  	            </td>
+  	           
+  	              <td class="text-center"><input type="text"/>
+  	            
+  	            </td>
+  	           
+  	             
+  	            
+  	            </td>
+  	          <td class="text-center">
+              <button class="btn btn-danger remove"
+                  type="button">Remove</button>
+                </td>
+  	          </tr>`);
+  	  });
+  	 $('#tbody1').on('click', '.remove', function () {
+  		  
+ 	    // Getting all the rows next to the 
+ 	    // row containing the clicked button
+ 	    var child = $(this).closest('tr').nextAll();
+ 	  
+ 	    // Iterating across all the rows 
+ 	    // obtained to change the index
+ 	    child.each(function () {
+ 	          
+ 	        // Getting <tr> id.
+ 	        var id = $(this).attr('id');
+ 	  
+ 	        // Getting the <p> inside the .row-index class.
+ 	         var idx = $(this).children('.row-index').children(''); 
+ 	  
+ 	        // Gets the row number from <tr> id.
+ 	        var dig = parseInt(id.substring(1));
+ 	  
+ 	        // Modifying row index.
+ 	        idx.html(`Row ${dig - 1}`);
+ 	  
+ 	        // Modifying row id.
+ 	        $(this).attr('id', `R${dig - 1}`);
+ 	    });
+ 	  
+ 	    // Removing the current row.
+ 	    $(this).closest('tr').remove();
+ 	  
+ 	    // Decreasing the total number of rows by 1.
+ 	    rowIdx--;
+ 	});
+  	
+  	 });
+      $('#nextBtn').click(function(){
+     	   $("html, body").animate({scrollTop:"0"},1000);
+
+     });
+     $('#prevBtn').click(function(){
+   	   $("html, body").animate({scrollTop:"0"},1000);
+
+     });
+      </script>
+            </body>
+            </html>

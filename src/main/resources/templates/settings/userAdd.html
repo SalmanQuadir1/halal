@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICCV</title>
+    <link rel="shortcut icon" type="image/png" th:href="@{/images/iccv_logo-removebg-preview.png}">
+    
+    	<link rel="stylesheet" th:href="@{/css/form.css}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" th:href="@{/css/all.min.css}">
+	<!-- bootstrap -->
+	<link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
+	<!-- owl carousel -->
+	<link rel="stylesheet" th:href="@{/css/owl.carousel.css}">
+	<!-- magnific popup -->
+	<link rel="stylesheet" th:href="@{/css/magnific-popup.css}">
+	<!-- animate css -->
+	<link rel="stylesheet" th:href="@{/css/animate.css}">
+	<!-- mean menu css -->
+	<link rel="stylesheet" th:href="@{/css/meanmenu.min.css}">
+	<!-- main style -->
+	<link rel="stylesheet" th:href="@{/css/main.css}">
+	<!-- responsive -->
+	<link rel="stylesheet" th:href="@{/css/responsive.css}">
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+#regForm {
+  background-color: #ffffff;
+  /* margin: 100px auto; */
+  font-family: Raleway;
+  padding: 40px;
+  /* width: 70%;
+  min-width: 300px; */
+}
+
+h1 {
+  text-align: center;  
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #04AA6D;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
+.tbl, th,td{
+      border: 2px solid black !important;
+     }
+     .t2 td{
+      border:none !important;
+     }
+     .pt{
+     padding-top:100px;
+     margin-top:7% !important;
+     margin-bottom: 10% !important;
+     }
+     @media screen and (min-device-width:100px) and (max-device-width: 600px) { 
+      .headerImage{
+      display:none;
+      }
+     
+      .pad{
+      width:100%;
+      }
+      .sigPad{
+      width:100% !important;
+      }
+     }
+</style>
+</head>
+<body>
+<div th:insert="fragments/header :: myheader"></div>
+ <div class="container pt ">
+       <div th:if="${success} != null" th:utext = "${success}" class="alert alert-icon alert-success border-success alert-dismissible fade show mt-4" role="alert">
+		 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+         </button></div>
+
+
+         <div th:if="${fail} != null" th:utext = "${fail}" class="alert alert-icon alert-danger border-danger alert-dismissible fade show mt-4" role="alert">
+	       <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+          </button></div>
+          
+         
+    
+      <div class="card mb-3 col-md-6 m-auto add p-0 shadow mt-5 mb-5 " style="border:none;" >
+	   <form th:object="${user}" th:action="@{/user/adduser}" method="post"  enctype= "multipart/form-data" class="" data-bvalidator-validate="true">
+	     
+	    <div class="card bg-light  pl-3 pr-3 " >
+        <div class="row">
+        <input type="text"  th:field="*{id}" th:value="*{id}" class="form-control is-valid" hidden="hidden" id="validationServer01" data-bvalidator="required" >
+        <div class="card-header col-md-12 bg-success">
+          <p class=" text-white p-1 text-uppercase text-center"> <b> Add User</b></p>
+           </div>
+           
+          <div class=" form-group col-md-12 mb-3"> 
+          <label for="validationServer05"><b>Username</b></label>
+		  <input type="text" th:field="*{username}"  class="form-control is-valid" id="validationServer05" placeholder="UserName"  required>
+		 </div> 
+           
+           <div class=" form-group col-md-12 mb-3">
+			<label for="validationServer03"><b>Role(/'s)</b></label> 
+			<select required="required" class="form-control is-valid" id="validationServer03" th:field="*{roles}" multiple="multiple">
+		  <!--  <option th:value="'abc'" th:text="abc"></option> -->
+			<option th:each="role : ${roles}"
+				th:value="${role.id}"
+				th:utext="${role.roleName}" />
+			</select>
+			</div>
+           
+          <div class="col-md-12 mb-3">
+			<label for="validationServer03"><b>Set Password</b></label>
+			<input type="password" th:field="*{password}" class="form-control is-valid" id="validationServer03" placeholder="Set Password" required>
+		</div>
+			    <div class="col-md-12  btn-list">
+					<button type="submit" class="btn btn-primary float-right mb-3">Submit</button>
+					
+				</div>
+				
+				</div>
+				</div>
+        </form> 
+		
+          
+ </div> 
+
+    </div>
+    <div th:insert="fragments/footer :: myfooter"></div>
+    	<script th:src="@{/js/jquery-1.11.3.min.js}"></script>
+	<!-- bootstrap -->
+	<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+	<!-- count down -->
+	<script th:src="@{/js/jquery.countdown.js}"></script>
+	<!-- isotope -->
+	<script th:src="@{/js/jquery.isotope-3.0.6.min.js}"></script>
+	<!-- waypoints -->
+	<script th:src="@{/js/waypoints.js}"></script>
+	<!-- owl carousel -->
+	<script th:src="@{/js/owl.carousel.min.js}"></script>
+	<!-- magnific popup -->
+	<script th:src="@{/js/jquery.magnific-popup.min.js}"></script>
+	<!-- mean menu -->
+	<script th:src="@{/js/jquery.meanmenu.min.js}"></script>
+	<!-- sticker js -->
+	<script th:src="@{/js/sticker.js}"></script>
+	<!-- main js -->
+	<script th:src="@{/js/main.js}"></script>
+    	<script th:src="@{/js/signaturepad.js}"></script>
+    
+    
+</body>
+</html>

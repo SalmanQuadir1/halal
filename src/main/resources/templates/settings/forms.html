@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
+
+	<!-- title -->
+	<title>ICCV</title>
+	<!-- AOS Animation -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" th:href="@{/images/iccv_logo-removebg-preview.png}">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" th:href="@{/css/all.min.css}">
+	<!-- bootstrap -->
+	<link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
+	<!-- owl carousel -->
+	<link rel="stylesheet" th:href="@{/css/owl.carousel.css}">
+	<!-- magnific popup -->
+	<link rel="stylesheet" th:href="@{/css/magnific-popup.css}">
+	<!-- animate css -->
+	<link rel="stylesheet" th:href="@{/css/animate.css}">
+	<!-- mean menu css -->
+	<link rel="stylesheet" th:href="@{/css/meanmenu.min.css}">
+	<!-- main style -->
+	<link rel="stylesheet" th:href="@{/css/main.css}">
+	<!-- responsive -->
+	<link rel="stylesheet" th:href="@{/css/responsive.css}">
+<style>
+body{
+	margin-top:170px !important;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@400;700&display=swap');
+
+html {
+  height: 100%;
+  min-height:800px;
+}
+body {
+ background-color:lightgrey;
+ font-family: 'Noto Sans', sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+h1{
+  font-weight:400;
+  padding-top:0;
+  margin-top:0;
+  font-family: 'Roboto Slab', serif;
+}
+
+#svg_form_time {
+  height: 15px;
+  max-width: 80%;
+  margin: 40px auto 20px;
+  display: block;
+}
+
+#svg_form_time circle,
+#svg_form_time rect {
+  fill: white;
+}
+
+.button {
+  background: rgb(237, 40, 70);
+  border-radius: 5px;
+  padding: 15px 25px;
+  display: inline-block;
+  margin: 10px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  box-shadow:0px 2px 5px rgb(0,0,0,0.5);
+}
+
+.disabled {
+  display:none;
+}
+
+section {
+  padding: 20px ;
+  max-width: 100%;
+  margin: 30px auto;
+  background:white;
+  background:rgba(255,255,255,0.9);
+  backdrop-filter:blur(10px);
+  box-shadow:0px 2px 10px rgba(0,0,0,0.3);
+  border-radius:5px;
+  transition:transform 0.2s ease-in-out;
+}
+
+
+input {
+  width: 100%;
+  margin: 7px 0px;
+  display: inline-block;
+  padding: 12px 25px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 1em;
+  font-family:inherit;
+  background:white;
+}
+
+p{
+  text-align:justify;
+margin-top:0;
+}
+
+
+</style>
+</head>
+<body>
+	
+	<!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+	
+	<!-- header -->
+	
+	<div th:insert="fragments/header :: myheader"></div>
+	
+	<!-- end header -->
+
+	<!-- search area -->
+	<div class="search-area">
+		<div class="container cardss">
+			<div class="row">
+				<div class="col-lg-12">
+					<span class="close-btn"><i class="fas fa-window-close"></i></span>
+					<div class="search-bar">
+						<div class="search-bar-tablecell">
+							<h3>Search For:</h3>
+							<input type="text" placeholder="Keywords">
+							<button type="submit">Search <i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end search arewa -->
+	
+	<!-- breadcrumb-section -->
+	<!-- <div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>ICCV</p>
+						<h1>Dashboard</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	
+		
+		<!-- <div class="steps mb-5 step1"> -->
+		<div class="container">
+			<div id="svg_wrap"></div>
+<form>
+<section>
+  <div class="tab" >
+        <div class="row">
+            <div class="col-md-2">
+                <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+            </div>
+            
+            <div class="col-md-8">
+            <h4 class="text-center"><b> ISLAMIC CO-ORDINATING COUNCIL
+                OF VICTORIA (ICCV) PTY. LTD.</b></h4>
+                <h6 class="text-center"> 12 Howes Street, Airport West VIC 3042 (PO Box 775 Tullamarine VIC 3043)<br>
+                    Phone : + 61 3 9380 5467 Fax : +61 3 9380 6143<br>
+                    Web page : www.iccv.com.au Email : office@iccv.com.au <br>
+                <b>ABN : 30 542 393 936</b>   </h6>
+                <h3 class="text-center"><b> APPLICATION FOR HALAL CERTIFICATION <br>(Food Processing)</b></h3>
+            </div>
+            
+            <div class="col-md-2">
+                <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+            </div>
+            
+            <br>
+            <div class="col-md-12">
+                <p class="bg-success  text-white p-1 text-uppercase mt-3 mb-4 mt-4"> SECTION &nbsp;<span style="font-size:15px;">1</span>: APPLICANT INFORMATION</p>
+            </div>
+            
+            <div class="form-group col-md-6">
+                <label for="inputAddress2"> <b>Name Of Organisation</b></label><br>
+                <select class="form-control" aria-label="Default select example">
+					  <option selected>Select Organisation</option>
+					  <option value="1">ASTE</option>
+					  <option value="2">ABC</option>
+					  <option value="3">XYZ</option>
+					</select>
+            </div>
+            
+            <div class="form-group col-md-6">
+              <label for="inputPassword4"><b>Establishment No </b></label>
+              <input type="text" class="form-control" name="" id="inputPassword4" placeholder="Establishment No">
+            </div>
+          
+          <div class="form-group col-md-12">
+            <label for="inputAddress"> <b>Business / Trading Name </b></label>
+            <input type="text" class="form-control"name="" id="inputAddress" placeholder="Business / Trading Name">
+          </div>
+          
+          <div class="form-group col-md-12">
+            <label for="inputAddress2"> <b>ABN </b></label>
+            <input type="text" class="form-control" name="" id="inputAddress2" placeholder="AABN">
+          </div>
+         
+          <div class="form-group col-md-12">
+            <label for="inputAddress2"> <b>Type of business Legal status(please tick one or more) </b></label>
+        </div> 
+        
+        <div class=" col-md-12">  
+            <table class="t2" style="border:none !important;">
+                <tr>
+                    <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                    <td>Sole Trader</td>
+                    <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                    <td>Partnership</td>
+                    
+                    <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                    <td>Trust</td>
+                </tr>
+                <tr>
+                    <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                    <td>Private Company</td>
+                   
+                    <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                    <td> Public Company</td>
+                    <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                    <td>Others</td>
+                </tr>
+           </table>
+           
+           </div>
+           
+            
+               <div class="form-group col-md-12">
+                <label for="inputAddress2"> <b>Trading Site Address </b></label>
+                <input type="text" class="form-control" name="" id="inputAddress2" placeholder="Trading Site Adress">
+              </div>
+              
+              <div class="form-group col-md-6">
+                <label for="inputAddress2"> <b>Mailing Address </b></label>
+                <input type="text" class="form-control" name="" id="inputAddress2" placeholder="Mailing Address">
+              </div>
+              
+             
+                <div class="form-group col-md-6">
+                <label for="inputAddress2"> <b>Post Code: </b></label><br>
+                <select class="form-control" aria-label="Default select example">
+					  <option selected>Select Post Code:</option>
+					  <option value="1">123</option>
+					  <option value="2">456</option>
+					  <option value="3">789</option>
+					</select>
+            </div>
+            
+              <div class="form-group col-md-6">
+                <label for="inputAddress2"> <b>Invoicing Address (if different from above) </b></label>
+                <input type="text" class="form-control" name="" id="inputAddress2" placeholder="">
+              </div>
+              
+                <div class="form-group col-md-6">
+                <label for="inputAddress2"> <b>Post Code: </b></label><br>
+                <select class="form-control" aria-label="Default select example">
+					  <option selected>Select Post Code:</option>
+					  <option value="1">123</option>
+					  <option value="2">456</option>
+					  <option value="3">789</option>
+					</select>
+                 </div>
+                 
+              <div class="form-group col-md-12">
+                <label for="inputAddress2"> <b>Current Proprietor established since </b></label>
+                <input type="text" class="form-control" name="" id="inputAddress2" placeholder="">
+              </div>
+              
+             
+            <div class=" col-md-6">
+                <label for="inputAddress2"> <b>Is the Applicant part of a Larger Group:</b></label>                  
+                <table class="t2" style="border:none !important;">
+                    <tr>
+                        <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                        <td>Yes</td>
+                        <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                        <td>No</td>
+                    </tr>
+                    
+               </table>
+               </div>
+               
+               <div class="form-group col-md-6">
+                <label for="inputAddress2"> <b>Name Of the Group</b></label><br>
+                <select class="form-control" aria-label="Default select example">
+					  <option selected>Select Group</option>
+					  <option value="1">ASTE</option>
+					  <option value="2">ABC</option>
+					  <option value="3">XYZ</option>
+					</select>
+            </div>
+            
+            <div class="form-group col-md-12">
+                <label for="inputAddress2"> <b>website:</b></label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="">
+            </div>
+            
+         </div>
+        </div> 
+            <!--  <========================Applicant form end=========================> -->
+            
+            
+</section>
+
+<section>
+ <div class="tab" >
+        <div class="row">
+            <div class="col-md-2">
+                <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+            </div>
+            
+            <div class="col-md-8">
+            <h4 class="text-center"><b> ISLAMIC CO-ORDINATING COUNCIL
+                OF VICTORIA (ICCV) PTY. LTD.</b></h4>
+                <h6 class="text-center"> 12 Howes Street, Airport West VIC 3042 (PO Box 775 Tullamarine VIC 3043)<br>
+                    Phone : + 61 3 9380 5467 Fax : +61 3 9380 6143<br>
+                    Web page : www.iccv.com.au Email : office@iccv.com.au <br>
+                <b>ABN : 30 542 393 936</b></h6>
+                <h3 class="text-center"><b> APPLICATION FOR HALAL CERTIFICATION <br>(Food Processing)</b></h3>
+            </div>
+            <br>
+            <div class="col-md-2">
+                <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+            </div>
+            <br>
+        <div class="col-md-12">
+            <p class="bg-success  text-white p-1 text-uppercase mt-3 mb-4"> SECTION &nbsp;<span style="font-size:15px;">2</span>: CONTACT PERSON/ AUTHORISED REPRESENTATIVE FOR THIS APPLICATION</p>
+        </div>
+        <div class="form-group col-md-8">
+            <label for="inputAddress2"> <b>Full Name of Contact Person:</b></label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputAddress2"> <b>Title:</b></label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="">
+        </div>
+        <div class="form-group col-md-12">
+            <label for="inputAddress2"> <b>Position:</b></label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="">
+        </div>
+        <div class="form-group col-md-8">
+            <label for="inputAddress2"> <b>Full Name of Authorised Representative:</b></label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputAddress2"> <b>Title:</b></label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="">
+        </div>
+        <div class="form-group col-md-12">
+            <label for="inputAddress2"> <b>Position:</b></label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="">
+        </div>
+        <div class="form-group col-md-8">
+            <label for="inputAddress2"> <b>Mailing Address </b></label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Mailing Address">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputAddress2"> <b>Post Code:</b></label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputAddress2"> <b>Contact: Business: </b></label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputAddress2"> <b>Mobile:</b></label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputAddress2"> <b> E-Mail: </b></label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="">
+        </div>
+        </div>
+        </div> 
+</section>
+
+<section>
+  <div class="tab">
+            <div class="row">
+                <div class="col-md-2">
+                    <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste " width="150" height="150">
+                </div>
+                <div class="col-md-8">
+                <h4 class="text-center mt-3"><b> ISLAMIC CO-ORDINATING COUNCIL
+                    OF VICTORIA (ICCV) PTY. LTD.</b></h4>
+                </div>
+                <div class="col-md-2">
+                    <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste " width="150" height="150">
+                </div>
+                <br>
+                
+                 
+                <div class="col-md-12">
+                    <p class="bg-success  text-white p-1 text-uppercase mb-4 mt-4"> SECTION &nbsp;<span style="font-size:15px;">3</span>: LOCATION DETAILS AND SCOPE (Separate Application Form Required for Each Location)</p>
+                </div>
+                <div class="form-group col-md-12">
+                  <label for="inputEmail4"><b>Name of Facility/Site: </b></label>
+                  <input type="text" class="form-control" id="inputEmail4" placeholder="">
+                </div>
+                <div class="form-group col-md-12">
+                  <label for="inputPassword4"><b>Physical Address of the facility/site:</b></label>
+                  <input type="text" class="form-control" id="inputPassword4" placeholder="">
+                </div>
+              
+              <div class="form-group col-md-12">
+                <label for="inputAddress"> <b>Scope of Halal Certification being sought: (e.g., Production and packaging of Fresh Chilled Meat)  </b></label>
+                <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+              </div>
+              <div class="form-group col-md-12">
+                <label for="inputAddress2"> <b> Is your facility / site fully halal dedicated?  (Y / N)</b></label>
+                <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+              </div>
+              
+              <div class="form-group col-md-12">
+                <label for="inputAddress2"> <b> Does your facility / site have a Halal Program?  (Y / N)</b></label><br>
+                <p>Export destinations (countries) where the accredited product/s are to be offered from this facility:</p>
+                <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+              </div>
+              <div class=" col-md-12 mt-3">
+                <label for="inputAddress2"> <b>Certification Standard/s:</b></label>                  
+                <table class="t2" style="border:none !important;">
+                    <tr>
+                        <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                        <td>Indonesian Halal Standard</td>
+                        <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                        <td>Kingdom of Saudi Arabia Halal Standard</td>
+                    </tr>
+                    
+                    <tr>
+                        <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                        <td>Malaysian Halal Standard</td>
+                        <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                        <td>GSO Halal Standard: </td>
+                    </tr>
+                    <tr>
+                        <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                        <td>Singapore Halal Standard</td>
+                        <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                        <td> Egypt Halal Standard</td>
+                    </tr>
+                    <tr>
+                        <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                        <td>Any other Halal Standard:</td>
+                        
+                    </tr>
+                    
+               </table>
+               </div>
+               <br><br>
+                  <div class=" col-md-12 mt-3">
+                <label for="inputAddress2"> <b>Audit Type:</b></label>                  
+                <table class="t2" style="border:none !important;">
+                    <tr>
+                        <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                        <td>Initial Certification </td>
+                        <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                        <td>Change in Scope – Addition of Products/Services</td>
+                    </tr>
+                    
+                    <tr>
+                        <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                        <td> Re-Certification </td>
+                        <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                        <td>Change in Scope – Addition of Sites or Decrease of Scope </td>
+                    </tr>
+                   
+                    
+               </table>
+               </div>
+
+                  </div>
+                  </div>
+</section>
+
+<section>
+      <div class="tab">
+            <div class="row">
+                <div class="col-md-2">
+                    <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+                </div>
+                <div class="col-md-8">
+                <h4 class="text-center mt-3"><b> ISLAMIC CO-ORDINATING COUNCIL
+                    OF VICTORIA (ICCV) PTY. LTD.</b></h4>
+                </div>
+                <div class="col-md-2">
+                    <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+                </div>
+                <br>
+
+               
+               <br><br>
+              <div class="form-group col-md-12 mt-4">
+                <label for="inputAddress2"> <b> Per your scope, what are the significant processes and/or products to be covered under the certification?</b></label>
+                
+                <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+              </div>
+
+              <div class="form-group col-md-12">
+                <label for="inputAddress2"> <b> Is there any part of the significant processes that is outsourced?</b></label>
+                <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+              </div>
+              <div class="form-group col-md-12">
+                <label for="inputAddress2"> <b> Are there legal/regulatory requirements relevant to the scope of the certification (e.g. Food Safety *-    Certification, Government/Local Council regulations)?</b></label>
+                <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+              </div>
+              <div class="form-group col-md-12">
+                <label for="inputAddress2"> <b> Details of any other certification (like ISO, HACCP) already obtained </b></label>
+                <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+              </div>
+              <div class="form-group col-md-12">
+                <label for="inputAddress2"> <b> Details of any other products<u> produced</u> at the same site that are non-Halal such as non-Halal animal ingredients or consumable alcohol? </b></label>
+                <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+              </div>
+              <div class="form-group col-md-12">
+                <label for="inputAddress2"> <b> Details of any other products<u> stored </u>at the same site that are non-Halal such as non-Halal animal ingredients or consumable alcohol?  </b></label>
+                <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+              </div>
+             
+             </div>
+             </div>
+</section>
+
+<section>
+<div class="tab">
+            <div class="row">
+                <div class="col-md-2">
+                    <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage " alt="aste" width="150" height="150">
+                </div>
+                <div class="col-md-8">
+                <h4 class="text-center mt-3"><b> ISLAMIC CO-ORDINATING COUNCIL
+                    OF VICTORIA (ICCV) PTY. LTD.</b></h4>
+                </div>
+                <div class="col-md-2">
+                    <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+                </div>
+                <br>
+             
+             
+                <div class=" col-md-12 table table-responsive">
+                <table class="table table-bordered  tbl mt-4">
+                  <thead>
+                      <tr>
+                        <th scope="col">Total Number of Employees  *</th>
+                        <th scope="col">Number of  Shifts and Hours</th>
+                        <th scope="col">Number of Employees/ Shift *</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><input type="number"/></td>
+                        <td> <input type="number"/></td>
+                        <td> <input type="number"/></td>
+                      </tr>
+                    </tbody>
+                    
+                  </table>
+                  <p><b>Note </b>* Employees include permanent and non-permanent (seasonal, temporary and sub-contracted) personnel.</p>
+               </div>
+               
+              
+                
+               <div class=" col-md-12 table table-responsive">
+                    <p><b>Convenient days</b>, dates and times for inspection visit</p>
+                    <table class="table table-bordered  tbl mt-4">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="text-center"><b>Days</b></th>
+                            <th scope="col" class="text-center">Mon</th>
+                            <th scope="col" class="text-center">Tue</th>
+                            <th scope="col" class="text-center">Wed</th>
+                            <th scope="col" class="text-center">Thu</th>
+                            <th scope="col" class="text-center">Fri</th>
+                            
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Date</td>
+                            <td> <input type="date"/></td>
+                            <td> <input type="date"/></td>
+                            <td> <input type="date"/></td>
+                            <td> <input type="date"/></td>
+                            <td> <input type="date"/></td>
+                          </tr>
+                          <tr>
+                            <td>Time</td>
+                            <td> <input type="time"/></td>
+                            <td> <input type="time"/></td>
+                            <td> <input type="time"/></td>
+                            <td> <input type="time"/></td>
+                            <td> <input type="time"/></td>
+                          </tr>
+                        </tbody>
+                        
+                      </table>
+                   </div>
+                   
+                   </div>
+                   </div>
+ </section>
+ 
+ <section>
+ <div class="tab">
+                  <div class="row">
+                <div class="col-md-2">
+                    <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+                </div>
+                <div class="col-md-8">
+                <h4 class="text-center mt-3"><b> ISLAMIC CO-ORDINATING COUNCIL
+                    OF VICTORIA (ICCV) PTY. LTD.</b></h4>
+                </div>
+                <div class="col-md-2">
+                    <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+                </div>
+                <br>
+                   <div class=" col-md-12 table table-responsive">
+                    <h4><b> Products and Ingredients</b></h4>
+                    <p>Details of Product(s) Requiring Halal Certification (Please complete product Data Sheet per each product)</p>
+                    <table class="table table-bordered  tbl mt-4">
+                      <thead>
+                          <tr>
+                            <th scope="col" class="text-center"> No. of Product  </th>
+                            <th scope="col" class="text-center">Brand Name</th>
+                            <th scope="col" class="text-center">Name of  Product on Label / Packaging</th>
+                            <th scope="col" class="text-center">Product Data Sheet Attached Y/N</th>
+                            <th scope="col" class="text-center">Action</th>
+                          </tr>
+                          
+                        </thead>
+                        <tbody id="tbody">
+                         <tr>
+                         <td><input type="text"/></td>
+                         <td> <input type="text"/></td>
+                         <td> <input type="text"/></td>
+                         <td> <input type="text"/></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <button class="btn btn-md btn-primary" id="addBtn" type="button">  Add new Row
+                        </button>
+                   </div>
+                   <div class="form-group col-md-12">
+                    <label for="inputAddress2"> <b> Please attach Product Data sheet/s with details (as per format in Attachment A).</b></label>
+                    <input type="file" class="form-control" id="inputAddress2" placeholder="">
+                  </div>
+                   <div class="form-group col-md-12">
+                    <label for="inputAddress"> <b>Details of any other products produced at your Establishment that are labelled with a
+                         product name that gives the impression of being non-Halal (for example refers to a consumable alcohol as a key 
+                         ingredient, or products associated with pork or pork by-products):  </b></label>
+                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="inputAddress"> <b>For laboratory testing, do you agree to use ICCV’s preferred laboratory and pay 
+                        related costs?  </b></label>
+                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+                  </div>
+                  
+            </div>
+            </div>
+ </section>
+ <section>
+ <div class="tab">
+            <div class="row">
+                <div class="col-md-2">
+                    <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+                </div>
+                <div class="col-md-8">
+                <h4 class="text-center mt-3"><b> ISLAMIC CO-ORDINATING COUNCIL
+                    OF VICTORIA (ICCV) PTY. LTD.</b></h4>
+                </div>
+                <div class="col-md-2">
+                    <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+                </div>
+                <br>
+                <div class=" col-md-12">
+                    <p><b>Alternatively, please provide your preferred laboratory contact details below:</b></p>
+                  </div>
+                  <!-- <div class="form-group col-md-8">
+                    <label for="inputAddress2"> <b>Laboratory Name: </b></label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Laboratory Name">
+                  </div> -->
+                   <div class="form-group col-md-8">
+                <label for="inputAddress2"> <b>Laboratory Name: </b></label><br>
+                <!-- <input type="text" class="form-control" id="inputAddress2" placeholder=""> -->
+                <select class="form-control" aria-label="Default select example">
+					  <option selected>Select Laboratory</option>
+					  <option value="1">ASTE</option>
+					  <option value="2">ABC</option>
+					  <option value="3">XYZ</option>
+					</select>
+            </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputAddress2"> <b>Tel: </b></label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Tel">
+                  </div>
+                  <div class="form-group col-md-8">
+                    <label for="inputAddress2"> <b>Contact Person: </b></label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Contact Person">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputAddress2"> <b>Position: </b></label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Position">
+                  </div>
+                  <div class="form-group col-md-8">
+                    <label for="inputAddress2"> <b>Address: </b></label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Address">
+                  </div>
+                  <!-- <div class="form-group col-md-4">
+                    <label for="inputAddress2"> <b>Post Code: </b></label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Post Code">
+                  </div> -->
+                   <div class="form-group col-md-4">
+                <label for="inputAddress2"> <b>Post Code: </b></label><br>
+                <!-- <input type="text" class="form-control" id="inputAddress2" placeholder=""> -->
+                <select class="form-control" aria-label="Default select example">
+					  <option selected>Select Post Code:</option>
+					  <option value="1">123</option>
+					  <option value="2">456</option>
+					  <option value="3">789</option>
+					</select>
+            </div>
+                  <div class=" col-md-12">
+                    <h4><b>Production and Processing Line</b></h4>
+                    
+                                    
+                              <table class="t2" style="border:none !important;">
+                           
+                            <p>Are the Halal and Non-Halal products processed by the same equipment? </p>
+                            <tr>
+                                <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                                <td>N/A</td>
+                                <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                                <td>No</td>
+                                
+                                <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                                <td>YES</td>
+                            </tr>
+                       </table>
+                       <table class="t2" style="border:none !important;">
+                           
+                        <p>Are the Halal and Non-Halal products processed in the day? </p>
+                        <tr>
+                            <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                            <td>N/A</td>
+                            <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                            <td>No</td>
+                            
+                            <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                            <td>YES</td>
+                        </tr>
+                   </table>
+                   <table class="t2" style="border:none !important;">
+                           
+                    <p>Are the Halal and Non-Halal products separated or segregated at cold Storage? </p>
+                    <tr>
+                        <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                        <td>N/A</td>
+                        <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                        <td>No</td>
+                        
+                        <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                        <td>YES</td>
+                    </tr>
+               </table>
+               <table class="t2" style="border:none !important;">
+                           
+                <p>Is daily documentation kept for the Halal and Non-Halal Production?   </p>
+                <tr>
+                    <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                    <td>N/A</td>
+                    <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                    <td>No</td>
+                    
+                    <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                    <td>YES</td>
+                </tr>
+           </table>
+                       
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="inputAddress2"> <b> Name of Document </b></label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                  </div>
+  
+            
+            </div>
+            </div>  
+ 
+ 
+ </section>
+ <section>
+ <div class="tab">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+                    </div>
+                    <div class="col-md-8">
+                    <h4 class="text-center mt-3"><b> ISLAMIC CO-ORDINATING COUNCIL
+                        OF VICTORIA (ICCV) PTY. LTD.</b></h4>
+                    </div>
+                    <div class="col-md-2">
+                        <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+                    </div>
+                    <br>
+                                    <div class=" col-md-12">
+                    <h4><b>Halal Integrity and Tracking</b></h4>
+                    <table class="t2" style="border:none !important;">
+                        <p> Is there a procedure to ensure Halal products are not contaminated by Non-Halal products?</p>
+                        <tr>
+                            <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                            <td>N/A</td>
+                            <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                            <td>No</td>
+                            
+                            <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                            <td>YES</td>
+                        </tr>
+                   </table>
+                   <table class="t2" style="border:none !important;">
+                    <p> Is there a procedure to trace or back track Halal and Non-Halal products?</p>
+                    <tr>
+                        <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                        <td>N/A</td>
+                        <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                        <td>No</td>
+                        
+                        <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                        <td>YES</td>
+                    </tr>
+               </table>
+               <table class="t2" style="border:none !important;">
+                <p> Is there a routine cleaning procedure for the equipment and premises? </p>
+                <tr>
+                    <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                    <td>N/A</td>
+                    <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                    <td>No</td>
+                    
+                    <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                    <td>YES</td>
+                </tr>
+           </table>
+           <table class="t2" style="border:none !important;">
+            <p> Is the cleaning product free from Non-Halal ingredients or materials?   </p>
+            <tr>
+                <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                <td>N/A</td>
+                <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                <td>No</td>
+                
+                <td style=" width:100px;"><input type="checkbox" name="con"></td>
+                <td>YES</td>
+            </tr>
+       </table>
+                   
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="inputAddress"> <b>Additional Details/Information	
+                         </b></label>
+                    <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+                  </div>
+                   
+</div></div>
+ </section>
+ <section>
+  <div class="tab">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+                    </div>
+                    <div class="col-md-8">
+                    <h4 class="text-center mt-3"><b> ISLAMIC CO-ORDINATING COUNCIL
+                        OF VICTORIA (ICCV) PTY. LTD.</b></h4>
+                    </div>
+                    <div class="col-md-2">
+                        <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+                    </div>
+                    <br>
+                     <div class="col-md-12">
+                        <p class="bg-success  text-white p-1 text-uppercase  mb-4 mt-4"> SECTION &nbsp;<span style="font-size:15px;">5</span>: POLICIES </p>
+                    </div>
+                    <div class="col-md-12">
+                    <h4><b>Confidentiality Policy: </b></h4>
+                        <p class="text-justify"> ICCV has policies and procedures in place regarding its management 
+                            of confidential information. All information obtained from the application will remain confidential. </p>
+                            <h4><b>Non-Discriminatory Policy:</b></h4>
+                            <p>
+                             ICCV shall make its services accessible to all applicants whose activities 
+                            fall within its scope of operations. All applications will be treated fairly. </p>
+                        
+                    </div><br>
+                    </div></div>
+ </section>
+ <section>
+  <div class="tab">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+                    </div>
+                    <div class="col-md-8">
+                    <h4 class="text-center mt-3"><b> ISLAMIC CO-ORDINATING COUNCIL
+                        OF VICTORIA (ICCV) PTY. LTD.</b></h4>
+                    </div>
+                    <div class="col-md-2">
+                        <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+                    </div>
+                    <br>
+                    <div class="col-md-12">
+                        <p class="bg-success  text-white p-1 text-uppercase  mb-4 mt-4"> SECTION &nbsp;<span style="font-size:16px;">6</span>: CONDITIONS OF CERTIFICATION </p>
+                    </div>
+                    <br>
+                    <div class="col-md-12">
+                        <h4><b>To attain and maintain certification, an applicant must agree to:</b></h4>
+                        <ol class="text-justify">
+                          
+                          <li> At all times abide by rules, fulfill the requirements and the guidelines for certification set by ICCV
+                             and/or other halal certification standards.</li>
+                          <li>Allow the Authorised Officers / Inspectors of ICCV unrestricted access to inspect the premises at any 
+                            time without prior notice.</li>
+                          <li> Immediately advise ICCV of any change in the nature of business and / or change of ownership.</li>
+                          <li> Pay the nominated fee for the Halal Certificate and any additional fee that may be imposed as a result
+                             of any breach that may require further inspections by ICCV.</li>
+                          <li> Not to transfer the Certificate to anyone or Duplicate it under any circumstance.</li>
+                        <li> Not to use any Label or Logo of ICCV once the Halal Certificate has expired or has been withdrawn.</li>
+                        <li>  Not to cook, sell or deal in any product that has not been certified as Halal or is not considered Halal
+                             suitable.</li>
+                        <li> Not to display the Halal Certificate at any premises other than for which it has been issued to.</li>
+                        <li>Return the Halal Certificate to ICCV after its expiry or withdrawal.</li>
+                        <li>Not to use its accreditation in such a manner as to bring ICCV into disrepute or make any statement relating
+                             to its accreditation misleading.</li>
+                        <li>Retain all quality records and technical records supporting results.</li>
+                        </ol>
+                      </div>
+                      <div class="col-md-12">
+                              <h5 class="text-justify"><b>In order to apply, The Applicant’s Authorised Representative must agree to the above conditions for
+                                 accreditation and must attest that all statements made on the application are correct to the best of his/her
+                                  knowledge.</b></h5>
+                                  <br>
+                                  <h5 class="text-justify"><b>I / We, acknowledge that breach of any of the above conditions and / or guidelines may result in
+                                     the Cancellation of Halal Certificate.</b></h5><br>
+                                     <h5><b>Signed on behalf of the Applicant:</b></h5>
+                      </div>
+                   
+        
+                                                  <div class="form-group col-md-6 text-center">
+                                              <label for="inputAddress2"> <b>Name of Authorised Representative</b></label>
+                                           <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                                          </div>
+                                            <div class="form-group col-md-6 text-center">
+                                              <label for="inputAddress2"> <b>Signature</b></label>
+                                           <div class="sigPad" id="linear" style="width:404px;">
+                                                    <div class="sig sigWrapper" style="height:auto;">
+                                                        <div class="typed"></div>
+                                                        <canvas class="pad" width="400" height="200" id="c"></canvas>
+                                                        <input type="hidden" name="output" class="output">
+                                                        <form:hidden path="signature" id="sig_image" />
+                                                        
+                                                    </div>
+                                                    <ul class="sigNav">
+                                                        <li class="clearButton"><button type="button" id="clearSignature" class="btn btn-sm btn-light">Clear</button></li>
+                                                    </ul>
+                                                </div>    
+                                            
+                                          </div>
+                                          <div class="form-group col-md-6 text-center ">
+                                              <label for="inputAddress2"> <b> Position Held</b></label>
+                                           <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                                          </div>
+                                          <div class="form-group col-md-6 text-center">
+                                              <label for="inputAddress2"> <b>Date</b></label>
+                                           <input type="date" class="form-control" id="inputAddress2" placeholder="">
+                                          </div>
+                                          
+                                          </div></div>
+                                          </section>
+                                          <section>
+                                          
+                                           <div class="tab">
+						                <div class="row">
+						                    <div class="col-md-2">
+						                        <img th:src="@{/images/stamp2.jpg}" class="img-rounded" alt="aste" width="150" height="150">
+						                    </div>
+						                    <div class="col-md-8">
+						                    <h4 class="text-center mt-3"><b> ISLAMIC CO-ORDINATING COUNCIL
+						                        OF VICTORIA (ICCV) PTY. LTD.</b></h4>
+						                    </div>
+						                    <div class="col-md-2">
+						                        <img th:src="@{/images/stamp2.jpg}" class="img-rounded" alt="aste" width="150" height="150">
+						                    </div>
+						                    <br>
+                                          
+                                          
+                                          
+                                     <div class=" col-md-12 table table-responsive">
+                                        <h4 class="text-center"><b>Table A - Classification of Halal product/Service Categories</b></h4>
+                                        <table class="table table-bordered  tbl1 mt-4" style="width:100%">
+                                            
+                                            <tbody>
+                                              <tr>
+                                                <td scope="col" rowspan="5" style="vertical-align : middle;text-align:center; width:50px; ;">Food and Feed processing</td>
+                                                <td scope="col" rowspan="5" style="vertical-align : middle;text-align:center; width:25px;">C</td>
+                                                <td scope="col" rowspan="5" style="vertical-align : middle;text-align:center; width:50px;">Food Manufacturing</td>
+                                                <td scope="col"> CI</td>
+                                                <td scope="col"> processing of perishable animal products</td>
+                                                <td scope="col" class="text-justify"> production of animal products including fish and seafood,meat,eggs,diary and fish products</td>
+                                              </tr>
+                                              <tr>
+                                                <td> CII</td>
+                                                <td>processing of perishable plant products </td>
+                                                <td class="text-justify">production of plant products including fruits and fresh juices,vegetables,grains,nuts,and pulses </td>
+                                              </tr>
+                                              <tr>
+                                                
+                                                <td> CIII</td>
+                                                <td class="text-justify"> Processing of perishable animal and plant products(mixed products)</td>
+                                                <td class="text-justify"> production of mixed animal and plant products including pizza,lasagne,sandwich,dumpling,ready-to-eat meals</td>
+                                                
+                                              </tr>
+                                              <tr>
+                                                
+                                                <td>CIV</td>
+                                                <td class="text-justify">processing of ambient stable products</td>
+                                                <td class="text-justify"> Production of food from any source that are stored and sold at ambient temperature, 
+                                                    including canned foods,biscuits,snacks,oil,drinking water,beverages,pasta,flour,sugar,food-grade salt</td>
+                                                
+                                              </tr>
+                                              <tr>
+                                                
+                                                <td>CV</td>
+                                                <td>Animal slaughtering</td>
+                                                <td class="text-justify">
+                                                    processing of carcasses including slaughtering in slaughterhouses,cutting,cleaning and packing
+                                                </td>
+                                                
+                                              </tr>
+                                            </tbody>
+                                            
+                                          </table>
+                                       </div>
+                                       
+                                     </div></div>  
+                                       
+ </section>
+ <section>
+ <div class="tab">
+						                <div class="row">
+						                    <div class="col-md-2">
+						                        <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+						                    </div>
+						                    <div class="col-md-8">
+						                    <h4 class="text-center mt-3"><b> ISLAMIC CO-ORDINATING COUNCIL
+						                        OF VICTORIA (ICCV) PTY. LTD.</b></h4>
+						                    </div>
+						                    <div class="col-md-2">
+						                        <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+						                    </div>
+						                    <br>
+                                       <div class="col-md-12">
+                                         <h4 class="text-center"><b>FOR OFFICE USE ONLY</b></h4>
+                                         <hr style="width:20%;height:2px;">
+                                       </div>
+                                           <div class="form-group col-md-6">
+                                              <label for="inputAddress2"> <b>Reviewed by</b></label>
+                                           <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                                          </div>
+                                          <div class="form-group col-md-6">
+                                            <label for="inputAddress2"> <b>Date</b></label>
+                                         <input type="date" class="form-control" id="inputAddress2" placeholder="">
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <label for="inputAddress2"> <b>Approved by</b></label>
+                                         <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputAddress2"> <b>Date</b></label>
+                                       <input type="date" class="form-control" id="inputAddress2" placeholder="">
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputAddress2"> <b>Approved /Declined</b></label>
+                                     <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputAddress2"> <b>Certificate No</b></label>
+                                     <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                                    </div>
+                                    <div class="col-md-12"><h3><b>Note:</b></h3>
+                                    
+                                    <h5><b>Completed application forms should be sent to ICCV at the above address.  
+                                        For further enquiries, please contact our Office:</b></h5>
+                                    </div>
+                                    <br>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputAddress2"> <b>Tel: (03) 9380 5467 </b></label>
+                                     
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputAddress2"> <b>Email : office@iccv.com.au</b></label>
+                                     
+                                    </div>
+                </div>                       
+
+                    </div>  
+ <section>
+  <div class="tab">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+                            </div>
+                            <div class="col-md-8">
+                            <h4 class="text-center mt-3"><b> ISLAMIC CO-ORDINATING COUNCIL
+                                OF VICTORIA (ICCV) PTY. LTD.</b></h4>
+                            </div>
+                            <div class="col-md-2">
+                                <img th:src="@{/images/stamp2.jpg}" class="img-rounded headerImage" alt="aste" width="150" height="150">
+                            </div>
+                            <br>
+                            
+                                  <div class="col-md-12">
+                                    <hr style="height:2px;border-width:0;color:black;background-color:black">
+                                    <h3 class="text-center">Attachment A – Product Data Sheet <br>
+                                        <small>(Please complete per each product)</small></h3>
+                                  </div>
+
+                                  <div class="form-group col-md-8">
+                                    <label for="inputAddress2"> <b>Product Name</b></label>
+                                 <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputAddress2"> <b>Product Code</b></label>
+                                 <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress2"> <b>Brand Name</b></label>
+                                 <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress2"> <b>Product Description <small>(Packaging shape and size)</small></b></label>
+                                 <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress2"> <b>Production Site</b></label>
+                                 <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress2"> <b>Packaging material</b></label>
+                                 <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                                </div>
+
+                                <div class=" col-md-12 table table-responsive">
+                                    
+                                    <table class="table table-bordered  tbl mt-4">
+                                      <thead>
+                                          <tr>
+                                            <th scope="col" > Name Of Ingredient  </th>
+                                            <th scope="col" >Origin Of Ingredient <br><small>(Animal,plant,synthetic)</small> </th>
+                                            <th scope="col" >Product Code<br><small>If There Is One</small></th>
+                                            <th scope="col" >Supplier</th>
+                                            <th>Manufacturer</th>
+                                            <th>Halal Certificate Yes / No Name Of Certifier</th>
+                                            <th>Expiry Date Of Halal Certificate</th>
+                                            <th>PIF Or Product Spec.</th>
+                                            <th>Any Additional Info /Material Description</th>
+                                            <th>Action</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody id="tbody1">
+                                          <tr>
+                                            <td><input type="text"/></td>
+                                            <td> <input type="text"/></td>
+                                            <td> <input type="text"/></td>
+                                            <td> <input type="text"/></td>
+                                            <td> <input type="text"/> </td>
+                                            <td> <input type="text"/></td>
+                                            <td> <input type="text"/></td>
+                                            <td> <input type="text"/></td>
+                                            <td> <input type="text"/></td>
+                                            
+                                          </tr>
+                                          
+                                        </tbody>
+                                      </table>
+                                      <button class="btn btn-md btn-primary" id="addBtn1" type="button"> Add new Row
+                                 </button>
+                                   </div>
+
+                            </div>
+                            </div>
+ 
+ </section>
+ </section>
+</form>
+  <div class="button" id="prev">&larr; Previous</div>
+<div class="button" id="next">Next &rarr;</div>
+<div class="button" id="submit">Agree and send application</div>
+			
+		</div>
+		
+	
+	<div th:insert="fragments/footer :: myfooter"></div>
+	<!-- end footer -->
+	
+
+	
+	<!-- jquery -->
+	
+	<script th:src="@{/js/aosAnimation.js}"></script>
+	
+	<script th:src="@{/js/jquery-1.11.3.min.js}"></script>
+	<!-- bootstrap -->
+	<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+	<!-- count down -->
+	<script th:src="@{/js/jquery.countdown.js}"></script>
+	<!-- isotope -->
+	<script th:src="@{/js/jquery.isotope-3.0.6.min.js}"></script>
+	<!-- waypoints -->
+	<script th:src="@{/js/waypoints.js}"></script>
+	<!-- owl carousel -->
+	<script th:src="@{/js/owl.carousel.min.js}"></script>
+	
+	<!-- magnific popup -->
+	<script th:src="@{/js/jquery.magnific-popup.min.js}"></script>
+	<!-- mean menu -->
+	<script th:src="@{/js/jquery.meanmenu.min.js}"></script>
+	<!-- sticker js -->
+	<script th:src="@{/js/sticker.js}"></script>
+	<script th:src="@{/js/signaturepad.js}"></script>
+
+	<!-- Aos Animation -->
+	<script th:src="@{/js/AOS.js}"></script>
+	
+		<script th:src="@{/js/multistepformscript.js}"></script>
+	<!-- main js -->
+	<script th:src="@{/js/main.js}"></script>
+
+</body>
+</html>

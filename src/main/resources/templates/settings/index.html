@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description"
+		content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
+
+	<!-- title -->
+	<title>ICCV</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" th:href="@{/images/favicon.png}">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" th:href="@{/css/all.min.css}">
+	<!-- bootstrap -->
+	<link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
+	<!-- owl carousel -->
+	<link rel="stylesheet" th:href="@{/css/owl.carousel.css}">
+	<!-- magnific popup -->
+	<link rel="stylesheet" th:href="@{/css/magnific-popup.css}">
+	<!-- animate css -->
+	<link rel="stylesheet" th:href="@{/css/animate.css}">
+	<!-- mean menu css -->
+	<link rel="stylesheet" th:href="@{/css/meanmenu.min.css}">
+	<!-- main style -->
+	<link rel="stylesheet" th:href="@{/css/main.css}">
+	<!-- responsive -->
+	<link rel="stylesheet" th:href="@{/css/responsive.css}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+	<!--PreLoader-->
+	<div class="loader">
+		<div class="loader-inner">
+			<div class="circle"></div>
+		</div>
+	</div>
+	<!--PreLoader Ends-->
+
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- logo -->
+						<div class="site-logo">
+							<a href="#">
+								<img th:src="@{/images/iccv_logo-removebg-preview.png}" alt="">
+							</a>
+						</div>
+						<!-- logo -->
+
+						<!-- menu start -->
+						<nav class="main-menu">
+							<ul>
+								<li class="current-list-item"><a href="#">HOME</a>
+									<ul class="sub-menu">
+										<li><a th:href="@{/dashboard/home}">Static Home</a></li>
+										<li><a th:href="@{/dashboard/index}">Slider Home</a></li>
+									</ul>
+								</li>
+								<li><a th:href="@{/dashboard/about}">ABOUT US</a></li>
+								<li><a href="#">GET CERTIFIED</a>
+									<ul class="sub-menu">
+										<li><a href="#">About</a></li>
+										<li><a href="#">Cart</a></li>
+										<li><a href="#">Check Out</a></li>
+										<li><a href="#">Contact</a></li>
+										<li><a href="#">News</a></li>
+										<li><a href="#">Shop</a></li>
+									</ul>
+								</li>
+								<li><a href="#">BUSINESS</a>
+									<ul class="sub-menu">
+										<li><a href="#">Business Details</a></li>
+										
+									</ul>
+								</li>
+								<li><a href="#">CONSUMER</a></li>
+								<li><a href="#">PROCESSING</a>
+									<ul class="sub-menu">
+										<li><a th:href="@{/dashboard/form}">Food Processing</a></li>
+										<li><a href="#">Audit Checklist </a></li>
+									</ul>
+								</li>
+								<li><a href="#">CONTACT</a></li>
+								 <li>
+									<div class="header-icons">
+										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+									</div>
+								</li> 
+							</ul>
+						</nav>
+						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+						<div class="mobile-menu"></div>
+						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+	<!-- search area -->
+	<!-- <div class="search-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<span class="close-btn"><i class="fas fa-window-close"></i></span>
+					<div class="search-bar">
+						<div class="search-bar-tablecell">
+							<h3>Search For:</h3>
+							<input type="text" placeholder="Keywords">
+							<button type="submit">Search <i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<!-- end search area -->
+
+	<!-- home page slider -->
+	<div class="homepage-slider">
+		<!-- single home slider -->
+		<div class="single-homepage-slider sl1" >
+			<div class="container">
+
+				<div class="row">
+					<div class="col-lg-10 offset-lg-1 text-center">
+						<div class="hero-text">
+							<div class="hero-text-tablecell">
+								<!-- <span><img src="./assets/img/halalname.png " class="h1img text-white " /></span> -->
+								<h1 class="text-white">HALAL</h1>
+								<h1>THE FUTURE OF FOOD</h1>
+								<div class="hero-btns">
+									<!-- <a th:href="shop.html" class="boxed-btn">APPLY NOW</a> -->
+									<a href="#" class="bordered-btn">APPLY NOW</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- single home slider -->
+		<div class="single-homepage-slider homepage-bg-2">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-lg-10 offset-lg-1 text-center">
+						<div class="hero-text">
+							<div class="hero-text-tablecell">
+								<h1 class="text-white  "><img th:src="@{/images/halalname.png}" class="h1img " />HALAL
+								</h1>
+								<h1>THE FUTURE OF FOOD</h1>
+								<div class="hero-btns">
+									<!-- <a th:href="shop.html" class="boxed-btn">APPLY NOW</a> -->
+									<a href="#" class="bordered-btn">APPLY NOW</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- single home slider -->
+		<div class="single-homepage-slider homepage-bg-3">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-lg-10 offset-lg-1 text-center">
+						<div class="hero-text">
+							<div class="hero-text-tablecell">
+								<h1 class="text-white  "><img th:src="@{/images/halalname.png}" class="h1img " />HALAL
+								</h1>
+								<h1>THE FUTURE OF FOOD</h1>
+								<div class="hero-btns">
+									<!-- <a th:href="shop.html" class="boxed-btn">APPLY NOW</a> -->
+									<a href="#" class="bordered-btn">APPLY NOW</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end home page slider -->
+
+	<!-- features list section -->
+	<div class="list-section pt-80 pb-80 mt-5">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+					<h2>HALAL CERTIFICATION WITH ICCV</h2>
+					<hr class="mx-5 ">
+					<p class="text-justify">We provide halal certification from the farm gate to the plate</p>
+					<h4 class="text-justify section2para ">The halal stamp you can trust.</h4>
+					<div class="">
+						<img th:src="@{/images/stamp2.JPG}" class="stamp" alt="">
+					</div>
+
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4 mb-lg-0 ">
+					<div class="row">
+						<div class="col-md-2">
+							<i class="fa fa-check-square-o" style="font-size:36px;"></i>
+						</div>
+						<div class="col-md-10">
+							<p class="col2Heading">LARGEST HALAL CERTIFICATION BODY</p>
+							<p class="text-justify">We are the largest halal certification body in Australia.</p>
+						</div>
+					</div>
+					<div class="row mt-5">
+						<div class="col-md-2">
+							<i class="fa fa-check-square-o" style="font-size:36px;"></i>
+						</div>
+						<div class="col-md-10">
+							<p class="col2Heading">AUSTRALIA WIDE</p>
+							<p class="text-justify">We are the only halal certification authority accredited by the
+								Australian government in all states and territories.</p>
+						</div>
+					</div>
+					<div class="row mt-5">
+						<div class="col-md-2">
+							<i class="fa fa-check-square-o" style="font-size:36px;"></i>
+						</div>
+						<div class="col-md-10">
+							<p class="col2Heading">EXPERT OVERSIGHT</p>
+							<p class="text-justify">Our halal certification is endorsed and overseen by internationally
+								renowned Muslim scholars with traditional Islamic credentials.
+						</div>
+					</div>
+
+
+				</div>
+				<div class="col-lg-4 col-md-6 bgSection2">
+					<div class="row">
+						<div class="col-md-2">
+							<i class="fa fa-check-square-o" style="font-size:36px;"></i>
+						</div>
+						<div class="col-md-10">
+							<p class="col2Heading">ACCREDITATIONS
+							</p>
+							<p class="text-justify">We are the only authority fully accredited by the Australian
+								Department of Agriculture and Fisheries for export into all halal importing countries
+						</div>
+					</div>
+					<div class="row mt-4">
+						<div class="col-md-2">
+							<i class="fa fa-check-square-o" style="font-size:36px;"></i>
+						</div>
+						<div class="col-md-10">
+							<p class="col2Heading">COMPLETE SOLUTION
+							</p>
+							<p class="text-justify">We are a complete solution provider, we do not use third parties to
+								cover certifications for products, geography or services</p>
+						</div>
+					</div>
+					<div class="row mt-4">
+						<div class="col-md-2">
+							<i class="fa fa-check-square-o" style="font-size:36px;"></i>
+						</div>
+						<div class="col-md-10">
+							<p class="col2Heading">IMPARTIALITY
+							</p>
+							<p class="text-justify">ICCV’s processes, procedures and governance is overseen by an
+								impartial external committee.
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- end features list section -->
+
+
+
+
+	<!-- cart banner section -->
+	<section class=" mt-5">
+		<div class="container bg-white">
+			<h2 class="text-center"><span class="section3Heading">Our</span>&nbsp;Services</h2>
+			<hr class="mx">
+			<p class="text-center ">ICCV Halal Certification is Australia’s largest internationally accredited halal
+				certification agency operating across six continents. Certifying many multi-national food processors and
+				raw material manufacturers, we are committed to offering a professional and affordable halal
+				certification service worldwide. The ICCV logo is globally accepted and recognised for providing quality
+				assurances and increasing marketability.</p>
+		</div>
+		<div class="logo-carousel-section mt-4 bg-white">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="logo-carousel-inner">
+							<div class="single-logo-item">
+								<img th:src="@{/images/halalname.png}" alt="">
+							</div>
+							<div class="single-logo-item">
+								<img th:src="@{/images/halalname.png}" alt="">
+							</div>
+							<div class="single-logo-item">
+								<img th:src="@{/images/company-logos/3.png}" alt="">
+							</div>
+							<div class="single-logo-item">
+								<img th:src="@{/images/company-logos/4.png}" alt="">
+							</div>
+							<div class="single-logo-item">
+								<img th:src="@{/images/company-logos/5.png}" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end cart banner section -->
+	<section class=" mt-5">
+		<div class="container bg-white">
+			<h2 class="text-center"><span class="section3Heading">4-</span>STEPS TO CERTIFICATION</h2>
+			<hr class="mx">
+		</div>
+		<div class="steps mb-5">
+			<div class="row">
+				<div class="col-md-3 text-center ">
+					<div class="btnn ">STEP 1</div>
+					<h6> <a th:href="@{/dashboard/form}">APPLY</a></h6>
+
+				</div>
+				<div class="col-md-3 text-center">
+					<div class="btnn ">STEP 2</div>
+					<h6>AGREE ON TERMS </h6>
+
+				</div>
+				<div class="col-md-3 text-center">
+					<div class="btnn ">STEP 3</div>
+					<h6>INSPECTION</h6>
+
+				</div>
+				<div class="col-md-3 text-center">
+					<div class="btnn ">STEP 4</div>
+					<h6>CERTIFICATE</h6>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class=" mt-5  pi-5 success">
+		<div class="container">
+			<div class="card shadow border-0 ">
+				<div class="row p-10">
+					<div class="col-md-6">
+						<img th:src="@{/images/meat2.JPG}" alt="image" class="imagemeat">
+					</div>
+					<div class="col-md-6 pi-5">
+						<h3 class="text-justify font-weight-bold">WHAT IS HALAL?</h3>
+						<p class="text-justify">Halal refers to the permissibility of all aspects of a Muslim’s life as
+							prescribed in the the sacred texts of Islam, the <i> Quran</i> and <i>Sunnah</i>
+							(traditions).</p>
+						<p class="text-justify">n relation to food it is an Islamic religious requirement to
+							establish<b> beyond doubt</b> its <i>halalness,</i> especially with the increasingly complex
+							world of food ingredients and food production.</p>
+						<button class="btn btn-danger">READ MORE</button>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+		</div>
+	</section>
+
+	<!-- footer -->
+	<div class="footer-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 p-4">
+					<div class="footer-box about-widget">
+						<img th:src="@{/images/iccv_logo-removebg-preview.png}" alt="" class="footerImage">
+						<p class="text-justify">Our offices are staffed during the business working week in Australia.
+							See below.</p>
+						<ul>
+							<li><i class="fa fa-clock section3Heading"></i>&nbsp;Monday-Friday 9am-5pm</li>
+							<li><i class="fa fa-phone section3Heading"></i> &nbsp;Phone: +61 3 9380 5467 Fax: +61 3 9380
+								6143</li>
+							<li><i class="fa fa-location-pin"></i>&nbsp;12 Howes St, Airport West VIC 3042</li>
+							<li><i class="fa fa-envelope section3Heading"></i>&nbsp;office@iccv.com.au</li>
+						</ul>
+
+					</div>
+				</div>
+				<div class="col-lg-4 p-4 ">
+					<div class="footer-box ">
+						<h2 class="widget-title text-center">THE LOGO YOU CAN TRUST</h2>
+						<img class=" mx-5  stamp" th:src="@{/images/stamp2-modified.png}" alt="">
+					</div>
+				</div>
+				<div class="col-lg-4 p-4 ">
+					<div class="footer-box ">
+						<h2 class="widget-title text-center">WRITE TO US</h2>
+						<p class="text-justify">We have a dedicated team who are ready to assist with your enquiries.
+							Please connect with us via the contact us form or call us directly.</p>
+						<br>
+						<ul>
+							<li><i class="fa fa-chevron-right"></i>&nbsp; Website Terms and Conditions</li>
+							<li><i class="fa fa-chevron-right"></i>&nbsp; Privacy Policy</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jquery -->
+	<script th:src="@{/js/jquery-1.11.3.min.js}"></script>
+	<!-- bootstrap -->
+	<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+	<!-- count down -->
+	<script th:src="@{/js/jquery.countdown.js}"></script>
+	<!-- isotope -->
+	<script th:src="@{/js/jquery.isotope-3.0.6.min.js}"></script>
+	<!-- waypoints -->
+	<script th:src="@{/js/waypoints.js}"></script>
+	<!-- owl carousel -->
+	<script th:src="@{/js/owl.carousel.min.js}"></script>
+	<!-- magnific popup -->
+	<script th:src="@{/js/jquery.magnific-popup.min.js}"></script>
+	<!-- mean menu -->
+	<script th:src="@{/js/jquery.meanmenu.min.js}"></script>
+	<!-- sticker js -->
+	<script th:src="@{/js/sticker.js}"></script>
+	<!-- main js -->
+	<script th:src="@{/js/main.js}"></script>
+
+</body>
+
+</html>
